@@ -2,32 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.font-card-title {
+    @apply font-header-menu font-bold leading-[30.24px] text-[24px] text-text-main;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.font-header {
+    @apply font-header-menu font-bold text-[48px] text-text-main;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.font-card-text {
+    @apply font-description font-normal text-[16px] text-text-main leading-[18.77px];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.font-declaration-text {
+    @apply font-description font-normal text-[16px] text-[#00000080];
+}
+
+.font-placeholder::placeholder {
+    @apply font-description font-normal text-[16px] text-text-main leading-[18.77px] text-opacity-50;
+}
+
+.font-footer-title {
+    @apply font-header-menu leading-[18.08px] text-[16px] text-text-main;
 }
